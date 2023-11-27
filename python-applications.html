@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="website icon" type="x-icon" href="images/Tab-logo.png">
+    <title>CodeByDurvesh</title>
+</head>
+<body>
+    <style>
+        .head-logo {
+            width: 35px;
+            cursor: pointer;
+        }
+
+        .foot-logo {
+            width: 35px;
+            cursor: pointer;
+        }
+
+        #home-underline {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+        }
+
+        #home-underline:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          background-color: #009688;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out;
+        }
+
+        #home-underline:hover:after {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+
+        #contact-underline {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+        }
+
+        #contact-underline:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          background-color: #009688;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out;
+        }
+
+        #contact-underline:hover:after {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+
+        #about-underline {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+      }
+
+      #about-underline:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: #009688;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+        }
+
+        #about-underline:hover:after {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+    </style>
+
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <span onclick="location.href='index.html'">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img class="head-logo" src="images/Tab-logo.png" alt="logo">
+                <span class="ml-3 text-xl">CodeByDurvesh</span>
+              </a>
+          </span>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a href="index.html" class="mr-5 hover:text-white" id="home-underline">Home</a>
+            <span class="about"><a href="about.html" class="mr-5 hover:text-white" id="about-underline">About</a></span>
+            <a href="contact.html" class="mr-5 hover:text-white" id="contact-underline">Contact</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" onclick="location.href='Feedback.html'">Feedback
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <hr>
+
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+            <div class="sm:w-1/2 mb-10 px-4">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="images/GUI.png">
+              </div>
+              <h2 class="title-font text-2xl font-medium text-white mt-6 mb-3">Graphical User Interface (GUI)</h2>
+              <p class="leading-relaxed text-base">In "GUI" the programs will be in a digital interface in which a user interacts with graphical components such as icons, buttons, and menus.</p>
+              <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded" onclick="location.href='python-gui.html'">Start (GUI)</button>
+            </div>
+            <div class="sm:w-1/2 mb-10 px-4">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="https://source.unsplash.com/1201x501/?sourcecode">
+              </div>
+              <h2 class="title-font text-2xl font-medium text-white mt-6 mb-3">Command Line Interface (CLI)</h2>
+              <p class="leading-relaxed text-base">In "CLI" the programs will be in a text-based interface where you can input commands that interact with a computer's operating system.</p>
+              <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded" onclick="location.href='python-cli.html'">Start (CLI)</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <img class="foot-logo" src="images/Tab-logo.png" alt="logo">
+            <span class="ml-3 text-xl">CodeByDurvesh</span>
+          </a>
+          <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 CodeByDurvesh.com —
+            <a href="https://www.instagram.com/durveshlivee/" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@durveshlivee</a>
+          </p>
+        </div>
+      </footer>
+
+</body>
+</html>

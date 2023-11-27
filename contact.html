@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="website icon" type="x-icon" href="images/Tab-logo.png" />
+    <title>CodeByDurvesh</title>
+  </head>
+  <body>
+    <style>
+      .contact {
+        color: white;
+      }
+
+      .head-logo {
+        width: 35px;
+        cursor: pointer;
+      }
+
+      .foot-logo {
+        width: 35px;
+        cursor: pointer;
+      }
+
+      #about-underline {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+      }
+
+      #about-underline:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: #009688;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+        }
+
+        #about-underline:hover:after {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+
+        #home-underline {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+        }
+
+        #home-underline:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          background-color: #009688;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out;
+        }
+
+        #home-underline:hover:after {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+    </style>
+
+    <header class="text-gray-400 bg-gray-900 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+      <span onclick="location.href='index.html'">
+        <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <img class="head-logo" src="images/Tab-logo.png" alt="logo">
+            <span class="ml-3 text-xl">CodeByDurvesh</span>
+          </a>
+      </span>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a href="index.html" class="mr-5 hover:text-white" id="home-underline">Home</a>
+          <a href="about.html" class="mr-5 hover:text-white" id="about-underline">About</a>
+          <span class="contact"
+            ><a href="contact.html" class="mr-5 hover:text-white"
+              >Contact</a
+            ></span
+          >
+        </nav>
+        <button
+          class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+          onclick="location.href='Feedback.html'"
+        >
+          Feedback
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <hr />
+
+    <form id="contactForm" method="post">
+      <section class="text-gray-400 bg-gray-900 body-font relative">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1
+              class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white"
+            >
+              Contact Us
+            </h1>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-400"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="phone_number" class="leading-7 text-sm text-gray-400"
+                    >Phone no.</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone_number"
+                    name="phone_number"
+                    pattern="[0-9]{10}"
+                    autocomplete="tel"
+                    required
+                    class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-gray-400"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    autocomplete="off"
+                    required 
+                    class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <button type="submit"
+                  class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                >
+                  Submit
+                </button>
+              </div>
+              <div
+                class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center"
+              >
+                <a class="text-indigo-400">codebydurvesh.com@gmail.com</a>
+                <p class="leading-normal my-5">
+                  Panvel, Navi Mumbai, <br />India, South Asia.
+                </p>
+                <span class="inline-flex">
+                  <a
+                    class="ml-4 text-gray-500"
+                    href="https://instagram.com/durveshlivee"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect
+                        width="20"
+                        height="20"
+                        x="2"
+                        y="2"
+                        rx="5"
+                        ry="5"
+                      ></rect>
+                      <path
+                        d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <hr>
+
+    <footer class="text-gray-400 bg-gray-900 body-font">
+      <div
+        class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      >
+        <a
+          class="flex title-font font-medium items-center md:justify-start justify-center text-white"
+        >
+          <img class="foot-logo" src="images/Tab-logo.png" alt="logo" />
+          <span class="ml-3 text-xl">CodeByDurvesh</span>
+        </a>
+        <p
+          class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4"
+        >
+          © 2023 CodeByDurvesh.com —
+          <a
+            href="https://www.instagram.com/durveshlivee/"
+            class="text-gray-500 ml-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@durveshlivee</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <script src="contact_form_app.js"></script>
+
+  </body>
+</html> 
