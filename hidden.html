@@ -1,10 +1,96 @@
 <!DOCTYPE html>
-  <head>
-    <title>hidden</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Code</title>
+    <style>
+        pre {
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(253, 186, 186);
+        }
+    </style>
+</head>
+<body>
+    <h2>Program 01:</h2>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form method="post" action="age.php"&gt;
+        Enter your age:
+        &lt;input type="number" name="age"&gt;
+        &lt;input type="submit" value="Check Eligibility"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 
-  <p> "Here will be my code for my practicals"</p>
-  
-  </body>
+&lt;?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Function to check eligibility
+        function checkEligibility($age) {
+            if ($age &gt;= 18) {
+                return "You are eligible to vote!";
+            } else {
+                return "You are not eligible to vote.";
+            }
+        }
+
+        // Get the age from form input
+        $age = $_POST['age'];
+
+        // Call the function and display the result
+        echo "&lt;h2&gt;" . checkEligibility($age) . "&lt;/h2&gt;";
+    }
+?&gt;
+        </code>
+    </pre>
+
+    <h2>Program 01: (error)</h2>
+
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form method="post" action="age.php"&gt;
+        Enter your age:
+        &lt;input type="number" name="age"&gt;
+        &lt;input type="submit" value="Check Eligibility"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;?php
+if(isset($_POST['submit']))
+{
+$age=$_POST['age'];
+if($age&gt;=18)
+echo"&lt;br&gt;&lt;br&gt; You are Eligible to vote";
+else
+echo"&lt;br&gt;&lt;br&gt; You are not Eligible to vote";
+}
+?&gt;
+        </code>
+    </pre>
+
+
+</body>
 </html>
