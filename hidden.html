@@ -22,10 +22,8 @@
     <pre>
         <code>
 &lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html&gt;
 &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -39,7 +37,6 @@
 
 &lt;?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Function to check eligibility
         function checkEligibility($age) {
             if ($age &gt;= 18) {
                 return "You are eligible to vote!";
@@ -48,48 +45,101 @@
             }
         }
 
-        // Get the age from form input
         $age = $_POST['age'];
-
-        // Call the function and display the result
         echo "&lt;h2&gt;" . checkEligibility($age) . "&lt;/h2&gt;";
     }
 ?&gt;
         </code>
     </pre>
 
-    <h2>Program 01: (error)</h2>
+    <h2>Program 02:</h2>
 
     <pre>
         <code>
+            <h2>Audio.html</h2>
 &lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html&gt;
 &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
+    &lt;title&gt;Audio Example&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;form method="post" action="age.php"&gt;
-        Enter your age:
-        &lt;input type="number" name="age"&gt;
-        &lt;input type="submit" value="Check Eligibility"&gt;
-    &lt;/form&gt;
+    &lt;h2&gt;Audio Playback with Loop&lt;/h2&gt;
+    &lt;audio controls autoplay loop&gt;
+        &lt;source src="audio.mp3" type="audio/mp3"&gt;
+    &lt;/audio&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 
-&lt;?php
-if(isset($_POST['submit']))
-{
-$age=$_POST['age'];
-if($age&gt;=18)
-echo"&lt;br&gt;&lt;br&gt; You are Eligible to vote";
-else
-echo"&lt;br&gt;&lt;br&gt; You are not Eligible to vote";
-}
-?&gt;
+
+--------------------------------------------------------------------
+
+    <h2>Audio1.html:</h2>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Multiple Source Audio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Multiple Audio Formats&lt;/h2&gt;
+    
+    &lt;ol&gt;
+        &lt;li&gt;mp3 audio format&lt;/li&gt;
+        &lt;li&gt;ogg audio format&lt;/li&gt;
+        &lt;li&gt;wav audio format&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;audio controls autoplay&gt;
+        &lt;source src="audio.mp3" type="audio/mp3"&gt;
+        &lt;source src="audio.ogg" type="audio/ogg"&gt;
+        &lt;source src="audio.wav" type="audio/wav"&gt;
+        &lt;p&gt;Your browser does not support the audio element.&lt;/p&gt;
+    &lt;/audio&gt;
+&lt;/body&gt;
+&lt;/html&gt;
         </code>
     </pre>
+
+    <h2>Program 03:</h2>
+
+    <pre>
+        <code>
+         <h2>Single Video Display:</h2>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Video Display&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Single Video Display&lt;/h1&gt;
+    &lt;video width="150" height="150" controls autoplay&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+        Your browser does not support the video tag.
+    &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+--------------------------------------------------------------------
+    <h2>Multi-Source Video Display:</h2>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Multi-Source Video&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Video with Multiple Source Formats&lt;/h1&gt;
+    &lt;video width="300" height="300" controls autoplay&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+        &lt;source src="video.webm" type="video/webm"&gt;
+        &lt;source src="video.ogg" type="video/ogg"&gt;
+        Your browser does not support the video tag.
+    &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
 
 
 </body>
